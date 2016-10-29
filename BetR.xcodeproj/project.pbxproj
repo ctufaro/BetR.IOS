@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13555B981DB6E704003A379B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13555B971DB6E704003A379B /* Extensions.swift */; };
+		13AE51EC1DAB06A9006F40BD /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE51EB1DAB06A9006F40BD /* Checkbox.swift */; };
+		13B2B92D1DA9DB5C004AA2AD /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */; };
+		13F7E4921D9F43A900FEDB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */; };
+		13F7E4941D9F43A900FEDB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4931D9F43A900FEDB93 /* ViewController.swift */; };
+		13F7E4971D9F43A900FEDB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E4951D9F43A900FEDB93 /* Main.storyboard */; };
+		13F7E49C1D9F43A900FEDB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E49A1D9F43A900FEDB93 /* LaunchScreen.storyboard */; };
+		13F7E4A71D9F43A900FEDB93 /* BetRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */; };
+		13F7E4B21D9F43A900FEDB93 /* BetRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4B11D9F43A900FEDB93 /* BetRUITests.swift */; };
+		13F7E4FC1DA0470600FEDB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E4FB1DA0470600FEDB93 /* Assets.xcassets */; };
+		13F7E4FE1DA06F1100FEDB93 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */; };
+		13F7E5101DA20ABE00FEDB93 /* GameTrakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */; };
+		13F7E5121DA2115600FEDB93 /* GameTrak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E5111DA2115600FEDB93 /* GameTrak.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13F7E4A31D9F43A900FEDB93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13F7E4861D9F43A900FEDB93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13F7E48D1D9F43A900FEDB93;
+			remoteInfo = BetTrak;
+		};
+		13F7E4AE1D9F43A900FEDB93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13F7E4861D9F43A900FEDB93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13F7E48D1D9F43A900FEDB93;
+			remoteInfo = BetTrak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13555B971DB6E704003A379B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		13AE51EB1DAB06A9006F40BD /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
+		13F7E48E1D9F43A900FEDB93 /* BetR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13F7E4931D9F43A900FEDB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13F7E4961D9F43A900FEDB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13F7E49B1D9F43A900FEDB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13F7E49D1D9F43A900FEDB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BetR/Info.plist; sourceTree = "<group>"; };
+		13F7E4A21D9F43A900FEDB93 /* BetTrakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTrakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetRTests.swift; sourceTree = "<group>"; };
+		13F7E4A81D9F43A900FEDB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F7E4AD1D9F43A900FEDB93 /* BetTrakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTrakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F7E4B11D9F43A900FEDB93 /* BetRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetRUITests.swift; sourceTree = "<group>"; };
+		13F7E4B31D9F43A900FEDB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F7E4FB1DA0470600FEDB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BetR/Assets.xcassets; sourceTree = "<group>"; };
+		13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTrakTableViewCell.swift; sourceTree = "<group>"; };
+		13F7E5111DA2115600FEDB93 /* GameTrak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTrak.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13F7E48B1D9F43A900FEDB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F7E49F1D9F43A900FEDB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F7E4AA1D9F43A900FEDB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13F7E4851D9F43A900FEDB93 = {
+			isa = PBXGroup;
+			children = (
+				13F7E4901D9F43A900FEDB93 /* BetR */,
+				13F7E4A51D9F43A900FEDB93 /* BetRTests */,
+				13F7E4B01D9F43A900FEDB93 /* BetRUITests */,
+				13F7E48F1D9F43A900FEDB93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13F7E48F1D9F43A900FEDB93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13F7E48E1D9F43A900FEDB93 /* BetR.app */,
+				13F7E4A21D9F43A900FEDB93 /* BetTrakTests.xctest */,
+				13F7E4AD1D9F43A900FEDB93 /* BetTrakUITests.xctest */,
+			);
+			name = Products;
+			path = BetR;
+			sourceTree = "<group>";
+		};
+		13F7E4901D9F43A900FEDB93 /* BetR */ = {
+			isa = PBXGroup;
+			children = (
+				13F7E5021DA1D2FC00FEDB93 /* Storyboards */,
+				13F7E5011DA1D2BE00FEDB93 /* Swift Classes */,
+				13F7E4FB1DA0470600FEDB93 /* Assets.xcassets */,
+				13F7E49D1D9F43A900FEDB93 /* Info.plist */,
+			);
+			name = BetR;
+			path = Betrics;
+			sourceTree = "<group>";
+		};
+		13F7E4A51D9F43A900FEDB93 /* BetRTests */ = {
+			isa = PBXGroup;
+			children = (
+				13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */,
+				13F7E4A81D9F43A900FEDB93 /* Info.plist */,
+			);
+			path = BetRTests;
+			sourceTree = "<group>";
+		};
+		13F7E4B01D9F43A900FEDB93 /* BetRUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13F7E4B11D9F43A900FEDB93 /* BetRUITests.swift */,
+				13F7E4B31D9F43A900FEDB93 /* Info.plist */,
+			);
+			path = BetRUITests;
+			sourceTree = "<group>";
+		};
+		13F7E5011DA1D2BE00FEDB93 /* Swift Classes */ = {
+			isa = PBXGroup;
+			children = (
+				13F7E5111DA2115600FEDB93 /* GameTrak.swift */,
+				13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */,
+				13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */,
+				13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */,
+				13F7E4931D9F43A900FEDB93 /* ViewController.swift */,
+				13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */,
+				13AE51EB1DAB06A9006F40BD /* Checkbox.swift */,
+				13555B971DB6E704003A379B /* Extensions.swift */,
+			);
+			name = "Swift Classes";
+			path = BetR;
+			sourceTree = "<group>";
+		};
+		13F7E5021DA1D2FC00FEDB93 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				13F7E4951D9F43A900FEDB93 /* Main.storyboard */,
+				13F7E49A1D9F43A900FEDB93 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13F7E48D1D9F43A900FEDB93 /* BetTrak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrak" */;
+			buildPhases = (
+				13F7E48A1D9F43A900FEDB93 /* Sources */,
+				13F7E48B1D9F43A900FEDB93 /* Frameworks */,
+				13F7E48C1D9F43A900FEDB93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetTrak;
+			productName = BetTrak;
+			productReference = 13F7E48E1D9F43A900FEDB93 /* BetR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13F7E4A11D9F43A900FEDB93 /* BetTrakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F7E4B91D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakTests" */;
+			buildPhases = (
+				13F7E49E1D9F43A900FEDB93 /* Sources */,
+				13F7E49F1D9F43A900FEDB93 /* Frameworks */,
+				13F7E4A01D9F43A900FEDB93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13F7E4A41D9F43A900FEDB93 /* PBXTargetDependency */,
+			);
+			name = BetTrakTests;
+			productName = BetTrakTests;
+			productReference = 13F7E4A21D9F43A900FEDB93 /* BetTrakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13F7E4AC1D9F43A900FEDB93 /* BetTrakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F7E4BC1D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakUITests" */;
+			buildPhases = (
+				13F7E4A91D9F43A900FEDB93 /* Sources */,
+				13F7E4AA1D9F43A900FEDB93 /* Frameworks */,
+				13F7E4AB1D9F43A900FEDB93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13F7E4AF1D9F43A900FEDB93 /* PBXTargetDependency */,
+			);
+			name = BetTrakUITests;
+			productName = BetTrakUITests;
+			productReference = 13F7E4AD1D9F43A900FEDB93 /* BetTrakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13F7E4861D9F43A900FEDB93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = tmc;
+				TargetAttributes = {
+					13F7E48D1D9F43A900FEDB93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MEGG897ETH;
+					};
+					13F7E4A11D9F43A900FEDB93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 13F7E48D1D9F43A900FEDB93;
+					};
+					13F7E4AC1D9F43A900FEDB93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 13F7E48D1D9F43A900FEDB93;
+					};
+				};
+			};
+			buildConfigurationList = 13F7E4891D9F43A900FEDB93 /* Build configuration list for PBXProject "BetR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13F7E4851D9F43A900FEDB93;
+			productRefGroup = 13F7E48F1D9F43A900FEDB93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13F7E48D1D9F43A900FEDB93 /* BetTrak */,
+				13F7E4A11D9F43A900FEDB93 /* BetTrakTests */,
+				13F7E4AC1D9F43A900FEDB93 /* BetTrakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13F7E48C1D9F43A900FEDB93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F7E49C1D9F43A900FEDB93 /* LaunchScreen.storyboard in Resources */,
+				13F7E4FC1DA0470600FEDB93 /* Assets.xcassets in Resources */,
+				13F7E4971D9F43A900FEDB93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F7E4A01D9F43A900FEDB93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F7E4AB1D9F43A900FEDB93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13F7E48A1D9F43A900FEDB93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F7E5121DA2115600FEDB93 /* GameTrak.swift in Sources */,
+				13F7E4941D9F43A900FEDB93 /* ViewController.swift in Sources */,
+				13B2B92D1DA9DB5C004AA2AD /* GameSelectViewController.swift in Sources */,
+				13555B981DB6E704003A379B /* Extensions.swift in Sources */,
+				13F7E5101DA20ABE00FEDB93 /* GameTrakTableViewCell.swift in Sources */,
+				13AE51EC1DAB06A9006F40BD /* Checkbox.swift in Sources */,
+				13F7E4921D9F43A900FEDB93 /* AppDelegate.swift in Sources */,
+				13F7E4FE1DA06F1100FEDB93 /* HomeController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F7E49E1D9F43A900FEDB93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F7E4A71D9F43A900FEDB93 /* BetRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13F7E4A91D9F43A900FEDB93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F7E4B21D9F43A900FEDB93 /* BetRUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13F7E4A41D9F43A900FEDB93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13F7E48D1D9F43A900FEDB93 /* BetTrak */;
+			targetProxy = 13F7E4A31D9F43A900FEDB93 /* PBXContainerItemProxy */;
+		};
+		13F7E4AF1D9F43A900FEDB93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13F7E48D1D9F43A900FEDB93 /* BetTrak */;
+			targetProxy = 13F7E4AE1D9F43A900FEDB93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13F7E4951D9F43A900FEDB93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F7E4961D9F43A900FEDB93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13F7E49A1D9F43A900FEDB93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F7E49B1D9F43A900FEDB93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13F7E4B41D9F43A900FEDB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13F7E4B51D9F43A900FEDB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13F7E4B71D9F43A900FEDB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BetR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmc.betrs;
+				PRODUCT_NAME = BetR;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		13F7E4B81D9F43A900FEDB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BetR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmc.betrs;
+				PRODUCT_NAME = BetR;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		13F7E4BA1D9F43A900FEDB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BetTrakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetTrak.app/BetTrak";
+			};
+			name = Debug;
+		};
+		13F7E4BB1D9F43A900FEDB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BetTrakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetTrak.app/BetTrak";
+			};
+			name = Release;
+		};
+		13F7E4BD1D9F43A900FEDB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BetTrakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BetTrak;
+			};
+			name = Debug;
+		};
+		13F7E4BE1D9F43A900FEDB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BetTrakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BetTrak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13F7E4891D9F43A900FEDB93 /* Build configuration list for PBXProject "BetR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F7E4B41D9F43A900FEDB93 /* Debug */,
+				13F7E4B51D9F43A900FEDB93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F7E4B71D9F43A900FEDB93 /* Debug */,
+				13F7E4B81D9F43A900FEDB93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13F7E4B91D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F7E4BA1D9F43A900FEDB93 /* Debug */,
+				13F7E4BB1D9F43A900FEDB93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13F7E4BC1D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F7E4BD1D9F43A900FEDB93 /* Debug */,
+				13F7E4BE1D9F43A900FEDB93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13F7E4861D9F43A900FEDB93 /* Project object */;
+}
