@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Betrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BetR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -223,7 +223,7 @@
         <!--Game Lines-->
         <scene sceneID="cgW-Xh-wWQ">
             <objects>
-                <viewController id="3wO-lC-X7t" customClass="HomeController" customModule="Betrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3wO-lC-X7t" customClass="HomeController" customModule="BetR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NxS-4O-W1g"/>
                         <viewControllerLayoutGuide type="bottom" id="nNT-6S-mmh"/>
@@ -240,7 +240,7 @@
                                 <rect key="frame" x="-4" y="64" width="383" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameTrakTableViewCell" rowHeight="139" id="ywP-Fi-NYI" customClass="GameTrakTableViewCell" customModule="Betrics" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameTrakTableViewCell" rowHeight="139" id="ywP-Fi-NYI" customClass="GameTrakTableViewCell" customModule="BetR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="383" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ywP-Fi-NYI" id="dW6-Cn-hw0">
@@ -424,7 +424,7 @@
         <!--Game Select View Controller-->
         <scene sceneID="Z46-gp-yBH">
             <objects>
-                <viewController id="xR0-Av-KoE" customClass="GameSelectViewController" customModule="Betrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xR0-Av-KoE" customClass="GameSelectViewController" customModule="BetR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="358-MY-cqa"/>
                         <viewControllerLayoutGuide type="bottom" id="2hy-Aa-lQT"/>
@@ -511,27 +511,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe9-e2-z6t" customClass="Checkbox" customModule="Betrics" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe9-e2-z6t" customClass="Checkbox" customModule="BetR" customModuleProvider="target">
                                 <rect key="frame" x="10" y="157" width="34" height="34"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPC-ny-rta" customClass="Checkbox" customModule="Betrics" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPC-ny-rta" customClass="Checkbox" customModule="BetR" customModuleProvider="target">
                                 <rect key="frame" x="10" y="274" width="34" height="34"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-EG-7mc" customClass="Checkbox" customModule="Betrics" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-EG-7mc" customClass="Checkbox" customModule="BetR" customModuleProvider="target">
                                 <rect key="frame" x="10" y="310" width="34" height="34"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-i9-IYb" customClass="Checkbox" customModule="Betrics" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-i9-IYb" customClass="Checkbox" customModule="BetR" customModuleProvider="target">
                                 <rect key="frame" x="10" y="380" width="34" height="34"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-M0-f17" customClass="Checkbox" customModule="Betrics" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-M0-f17" customClass="Checkbox" customModule="BetR" customModuleProvider="target">
                                 <rect key="frame" x="10" y="417" width="34" height="34"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNP-jb-tIH" customClass="Checkbox" customModule="Betrics" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNP-jb-tIH" customClass="Checkbox" customModule="BetR" customModuleProvider="target">
                                 <rect key="frame" x="10" y="120" width="34" height="34"/>
                                 <state key="normal" title="Button"/>
                             </button>

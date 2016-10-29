@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13555B981DB6E704003A379B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13555B971DB6E704003A379B /* Extensions.swift */; };
-		13AE51EC1DAB06A9006F40BD /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE51EB1DAB06A9006F40BD /* Checkbox.swift */; };
-		13B2B92D1DA9DB5C004AA2AD /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */; };
-		13F7E4921D9F43A900FEDB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */; };
-		13F7E4941D9F43A900FEDB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4931D9F43A900FEDB93 /* ViewController.swift */; };
+		13AD81261DC4E3D80068286E /* GameTrak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E5111DA2115600FEDB93 /* GameTrak.swift */; };
+		13AD81271DC4E3D80068286E /* GameTrakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */; };
+		13AD81281DC4E3D80068286E /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */; };
+		13AD81291DC4E3D80068286E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */; };
+		13AD812A1DC4E3D80068286E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4931D9F43A900FEDB93 /* ViewController.swift */; };
+		13AD812B1DC4E3D80068286E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */; };
+		13AD812C1DC4E3D80068286E /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE51EB1DAB06A9006F40BD /* Checkbox.swift */; };
+		13AD812D1DC4E3D80068286E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13555B971DB6E704003A379B /* Extensions.swift */; };
 		13F7E4971D9F43A900FEDB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E4951D9F43A900FEDB93 /* Main.storyboard */; };
 		13F7E49C1D9F43A900FEDB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E49A1D9F43A900FEDB93 /* LaunchScreen.storyboard */; };
 		13F7E4A71D9F43A900FEDB93 /* BetRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */; };
 		13F7E4B21D9F43A900FEDB93 /* BetRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4B11D9F43A900FEDB93 /* BetRUITests.swift */; };
 		13F7E4FC1DA0470600FEDB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E4FB1DA0470600FEDB93 /* Assets.xcassets */; };
-		13F7E4FE1DA06F1100FEDB93 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */; };
-		13F7E5101DA20ABE00FEDB93 /* GameTrakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */; };
-		13F7E5121DA2115600FEDB93 /* GameTrak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E5111DA2115600FEDB93 /* GameTrak.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +116,6 @@
 				13F7E49D1D9F43A900FEDB93 /* Info.plist */,
 			);
 			name = BetR;
-			path = Betrics;
 			sourceTree = "<group>";
 		};
 		13F7E4A51D9F43A900FEDB93 /* BetRTests */ = {
@@ -160,6 +159,7 @@
 				13F7E49A1D9F43A900FEDB93 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			path = BetR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,14 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F7E5121DA2115600FEDB93 /* GameTrak.swift in Sources */,
-				13F7E4941D9F43A900FEDB93 /* ViewController.swift in Sources */,
-				13B2B92D1DA9DB5C004AA2AD /* GameSelectViewController.swift in Sources */,
-				13555B981DB6E704003A379B /* Extensions.swift in Sources */,
-				13F7E5101DA20ABE00FEDB93 /* GameTrakTableViewCell.swift in Sources */,
-				13AE51EC1DAB06A9006F40BD /* Checkbox.swift in Sources */,
-				13F7E4921D9F43A900FEDB93 /* AppDelegate.swift in Sources */,
-				13F7E4FE1DA06F1100FEDB93 /* HomeController.swift in Sources */,
+				13AD81261DC4E3D80068286E /* GameTrak.swift in Sources */,
+				13AD81271DC4E3D80068286E /* GameTrakTableViewCell.swift in Sources */,
+				13AD81281DC4E3D80068286E /* GameSelectViewController.swift in Sources */,
+				13AD81291DC4E3D80068286E /* AppDelegate.swift in Sources */,
+				13AD812A1DC4E3D80068286E /* ViewController.swift in Sources */,
+				13AD812B1DC4E3D80068286E /* HomeController.swift in Sources */,
+				13AD812C1DC4E3D80068286E /* Checkbox.swift in Sources */,
+				13AD812D1DC4E3D80068286E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
