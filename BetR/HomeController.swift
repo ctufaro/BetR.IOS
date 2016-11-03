@@ -46,7 +46,7 @@ class HomeController: UIViewController, UITableViewDelegate{
         var moneyLineVisiting = ""
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSURL(string:"http://betricsrest.azurewebsites.net/api/games")!
+        let url = NSURL(string:"http://betrest.azurewebsites.net/api/games")!
         let task = NSURLSession.sharedSession().dataTaskWithURL(url){ (data,response,error) -> Void in
             
             if let urlContent = data{
