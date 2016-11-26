@@ -391,7 +391,6 @@
                                             <outlet property="lblDate" destination="hME-95-v6e" id="ifv-SX-Dkb"/>
                                             <outlet property="lblFirst" destination="Szb-0J-esH" id="xgV-bI-f5w"/>
                                             <outlet property="lblSecond" destination="Ual-eJ-23w" id="wsv-oJ-TT0"/>
-                                            <segue destination="xR0-Av-KoE" kind="show" identifier="ShowGameSegue" id="KoF-KA-xM0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -411,7 +410,13 @@
                             <constraint firstItem="nNT-6S-mmh" firstAttribute="top" secondItem="sO9-fr-eis" secondAttribute="bottom" id="xXz-0h-wLX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Game Lines" id="Idl-kU-f18"/>
+                    <navigationItem key="navigationItem" title="Game Lines" id="Idl-kU-f18">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="CT0-P5-rh2">
+                            <connections>
+                                <segue destination="xR0-Av-KoE" kind="show" id="Y65-ku-eEB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="actIndicator" destination="Z9F-ry-Fqf" id="6bD-ds-s2T"/>
                         <outlet property="tblView" destination="sO9-fr-eis" id="iGJ-TB-aET"/>
