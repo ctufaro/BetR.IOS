@@ -53,7 +53,7 @@ class GameSelectViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         lblTitle.text = title1
         lblTitle2.text = title2
         txtMoneyHome.text = moneyHome

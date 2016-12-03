@@ -27,9 +27,9 @@ class HomeController: UIViewController, UITableViewDelegate{
         GetGameData()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if let indexPath = self.tblView.indexPathForSelectedRow {
-            self.tblView.deselectRowAtIndexPath(indexPath, animated: true)
+            self.tblView.deselectRow(at: indexPath, animated: true)
         }
     }
     
@@ -46,92 +46,64 @@ class HomeController: UIViewController, UITableViewDelegate{
         var moneyLineVisiting = ""
         
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSURL(string:"http://betrest.azurewebsites.net/api/games")!
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url){ (data,response,error) -> Void in
+        let url = URL(string:"http://betrest.azurewebsites.net/api/games")!
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data,response,error) -> Void in
             
             if let urlContent = data{
                 
                 do{
-                    
-                    let jsonResult = try NSJSONSerialization.JSONObjectWithData(urlContent, options: NSJSONReadingOptions.MutableContainers)
-                    if let events = jsonResult["events"] as? [[String: AnyObject]] {
+                    let jsonResult = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
+                    //let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers)
+                    if let events = jsonResult["SportsBookMain"] as? [[String: AnyObject]] {
                         for event in events {
                             
-                            if let eventDate = event["event_datetimeGMT"] as? String {
-                                print(eventDate)
-                                newEventDate = eventDate
+                            if let eDate = event["EventDate"] as? String {
+                                newEventDate = eDate
                             }
                             
-                            //participants
-                            if let participants = event["participants"] as? [[String: AnyObject]] {
-                                for participant in participants {
-                                    if let name = participant["participant_name"] as? String {
-                                        if let homevist = participant["visiting_home_draw"] as? String{
-                                            if homevist == "Home"{
-                                                print ("Home:" + name)
-                                                teamHome = name
-                                            }
-                                            else{
-                                                print ("Visitor:" + name)
-                                                teamVisiting = name
-                                            }
-                                        }
-                                    }
-                                }
+                            if let tHome = event["TeamHome"] as? String {
+                                teamHome = tHome
                             }
                             
-                            //periods
-                            if let periods = event["periods"] as? [[String: AnyObject]] {
-                                for period in periods {
-                                    if let period_number = period["period_number"] as? String {
-                                        if period_number == "0"{
-                                            //spreads
-                                            if let s = period["spread"]{
-                                                if let spread_home = s["spread_home"] as? String{
-                                                    print("spread home:" + String(spread_home))
-                                                    spreadHome = String(spread_home)
-                                                }
-                                                if let spread_visiting = s["spread_visiting"] as? String{
-                                                    print("spread visit:" + String(spread_visiting))
-                                                    spreadVisiting = String(spread_visiting)
-                                                }
-                                            }
-                                            //totals
-                                            if let t = period["total"]{
-                                                if let total_points = t["total_points"] as? String{
-                                                    print("total points:" + String(total_points))
-                                                    totalPoints = String(total_points)
-                                                }
-                                                if let over_adjust = t["over_adjust"] as? String{
-                                                    print("over:" + String(over_adjust))
-                                                    overAdjust = String(over_adjust)
-                                                }
-                                                if let under_adjust = t["under_adjust"] as? String{
-                                                    print("under:" + String(under_adjust))
-                                                    underAdjust = String(under_adjust)
-                                                }
-                                            }
-                                            //moneyline
-                                            if let m = period["moneyline"]{
-                                                if let moneyline_home = m["moneyline_home"] as? String{
-                                                    print("money home" + String(moneyline_home))
-                                                    moneyLineHome = String(moneyline_home)
-                                                }
-                                                if let moneyline_visiting = m["moneyline_visiting"] as? String{
-                                                    print("money vist" + String(moneyline_visiting))
-                                                    moneyLineVisiting = String(moneyline_visiting)
-                                                }
-                                            }
-                                            
-                                        }
-                                    }
-                                }
+                            if let hSpread = event["SpreadHome"] as? String {
+                                spreadHome = hSpread
                             }
+                            
+                            if let mHome = event["MoneyLineHome"] as? String {
+                                moneyLineHome = mHome
+                            }
+                            
+                            if let tVisting = event["TeamVisiting"] as? String {
+                                teamVisiting = tVisting
+                            }
+                            
+                            if let mlVisiting = event["MoneyLineVisiting"] as? String {
+                                moneyLineVisiting = mlVisiting
+                            }
+                            
+                            if let sVisiting = event["SpreadVisiting"] as? String {
+                                spreadVisiting = sVisiting
+                            }
+                            
+                            if let uAdjust = event["UnderAdjust"] as? String {
+                                underAdjust = uAdjust
+                            }
+                            
+                            if let oAdjust = event["OverAdjust"] as? String {
+                                overAdjust = oAdjust
+                            }
+                            
+                            if let tPoints = event["TotalPoints"] as? String {
+                                totalPoints = tPoints
+                            }
+                        
+                            
+ 
                             self.items.append(GameTrak(TeamHome: teamHome, TeamVisiting: teamVisiting, EventDate: newEventDate, SpreadHome:spreadHome, SpreadVisiting:spreadVisiting, TotalPoints:totalPoints, OverAdjust:overAdjust, UnderAdjust:underAdjust, MoneyLineHome:moneyLineHome, MoneyLineVisiting:moneyLineVisiting))
                             print("----")
                         }
                     }
-                    dispatch_async(dispatch_get_main_queue(),{
+                    DispatchQueue.main.async(execute: {
                         self.tblView.reloadData()
                         self.actIndicator.stopAnimating()
                         self.actIndicator.hidesWhenStopped = true
@@ -141,7 +113,7 @@ class HomeController: UIViewController, UITableViewDelegate{
                     print("JSON Failed")
                 }
             }
-        }
+        })
         task.resume()
     }
     
@@ -150,7 +122,7 @@ class HomeController: UIViewController, UITableViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         /*
         if  segue.identifier == "ShowGameSegue", let destination = segue.destinationViewController as? GameSelectViewController,
             blogIndex = tblView.indexPathForSelectedRow?.row {
@@ -165,13 +137,13 @@ class HomeController: UIViewController, UITableViewDelegate{
         */
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return items.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("GameTrakTableViewCell") as! GameTrakTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameTrakTableViewCell") as! GameTrakTableViewCell
         
         cell.btnHomeMoney.tag = indexPath.row
         cell.btnHomeSpread.tag = indexPath.row
@@ -202,23 +174,23 @@ class HomeController: UIViewController, UITableViewDelegate{
         cell.lblFirst?.text = items[indexPath.row].TeamHome
         cell.lblSecond?.text = items[indexPath.row].TeamVisiting
         cell.lblDate?.text = items[indexPath.row].EventDate
-        cell.btnHomeMoney?.setTitle(items[indexPath.row].MoneyLineHome, forState: UIControlState.Normal)
-        cell.btnHomeSpread?.setTitle(items[indexPath.row].SpreadHome, forState: UIControlState.Normal)
-        cell.btnHomeTotal?.setTitle("O " + items[indexPath.row].TotalPoints, forState: UIControlState.Normal)
-        cell.btnVisitMoney?.setTitle(items[indexPath.row].MoneyLineVisiting, forState: UIControlState.Normal)
-        cell.btnVisitSpread?.setTitle(items[indexPath.row].SpreadVisiting, forState: UIControlState.Normal)
-        cell.btnVisitTotal?.setTitle("U " + items[indexPath.row].TotalPoints, forState: UIControlState.Normal)
+        cell.btnHomeMoney?.setTitle(items[indexPath.row].MoneyLineHome, for: UIControlState())
+        cell.btnHomeSpread?.setTitle(items[indexPath.row].SpreadHome, for: UIControlState())
+        cell.btnHomeTotal?.setTitle("O " + items[indexPath.row].TotalPoints, for: UIControlState())
+        cell.btnVisitMoney?.setTitle(items[indexPath.row].MoneyLineVisiting, for: UIControlState())
+        cell.btnVisitSpread?.setTitle(items[indexPath.row].SpreadVisiting, for: UIControlState())
+        cell.btnVisitTotal?.setTitle("U " + items[indexPath.row].TotalPoints, for: UIControlState())
 
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let row = indexPath.row
         print(items[row])
     }
     
-    func CheckButtonStates(row:Int, cell:GameTrakTableViewCell){
+    func CheckButtonStates(_ row:Int, cell:GameTrakTableViewCell){
         //REFACTOR THIS
         let buttonHomeMoneyState = HomeController.buttonStates[row]?.buttonHomeMoney
         if (buttonHomeMoneyState != nil){

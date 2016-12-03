@@ -26,40 +26,40 @@ class GameTrakTableViewCell: UITableViewCell {
     var blue = 179
     
     
-    @IBAction func btnHomeMoneyClick(sender: AnyObject) {
+    @IBAction func btnHomeMoneyClick(_ sender: AnyObject) {
         let row = sender.tag;
-        WireButton(sender as! UIButton, row: row, field: "HomeMoney")
+        WireButton(sender as! UIButton, row: row!, field: "HomeMoney")
     }
     
-    @IBAction func btnHomeSpreadClick(sender: AnyObject) {
+    @IBAction func btnHomeSpreadClick(_ sender: AnyObject) {
         let row = sender.tag;
-        WireButton(sender as! UIButton, row: row, field: "HomeSpread")
-    }
-    
-    
-    @IBAction func btnHomeTotalClick(sender: AnyObject) {
-        let row = sender.tag;
-        WireButton(sender as! UIButton, row: row, field: "HomeTotal")
+        WireButton(sender as! UIButton, row: row!, field: "HomeSpread")
     }
     
     
-    @IBAction func btnVisitMoneyClick(sender: AnyObject) {
+    @IBAction func btnHomeTotalClick(_ sender: AnyObject) {
         let row = sender.tag;
-        WireButton(sender as! UIButton, row: row, field: "VisitMoney")
+        WireButton(sender as! UIButton, row: row!, field: "HomeTotal")
+    }
+    
+    
+    @IBAction func btnVisitMoneyClick(_ sender: AnyObject) {
+        let row = sender.tag;
+        WireButton(sender as! UIButton, row: row!, field: "VisitMoney")
     }
 
-    @IBAction func btnVisitSpreadClick(sender: AnyObject) {
+    @IBAction func btnVisitSpreadClick(_ sender: AnyObject) {
         let row = sender.tag;
-        WireButton(sender as! UIButton, row: row, field: "VisitSpread")
+        WireButton(sender as! UIButton, row: row!, field: "VisitSpread")
     }
     
-    @IBAction func btnVisitTotalClick(sender: AnyObject) {
+    @IBAction func btnVisitTotalClick(_ sender: AnyObject) {
         let row = sender.tag;
-        WireButton(sender as! UIButton, row: row, field: "VisitTotal")
+        WireButton(sender as! UIButton, row: row!, field: "VisitTotal")
     }
     
     
-    func WireButton(button:UIButton, row:Int, field:String){
+    func WireButton(_ button:UIButton, row:Int, field:String){
         
         //REFACTOR THIS
         
@@ -106,7 +106,7 @@ class GameTrakTableViewCell: UITableViewCell {
         btnVisitTotal.layer.cornerRadius = 5;
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }

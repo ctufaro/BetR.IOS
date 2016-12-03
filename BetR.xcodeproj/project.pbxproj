@@ -49,10 +49,10 @@
 		13F7E4961D9F43A900FEDB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13F7E49B1D9F43A900FEDB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F7E49D1D9F43A900FEDB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BetR/Info.plist; sourceTree = "<group>"; };
-		13F7E4A21D9F43A900FEDB93 /* BetTrakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTrakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F7E4A21D9F43A900FEDB93 /* BetRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetRTests.swift; sourceTree = "<group>"; };
 		13F7E4A81D9F43A900FEDB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13F7E4AD1D9F43A900FEDB93 /* BetTrakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTrakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F7E4AD1D9F43A900FEDB93 /* BetRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F7E4B11D9F43A900FEDB93 /* BetRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetRUITests.swift; sourceTree = "<group>"; };
 		13F7E4B31D9F43A900FEDB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13F7E4FB1DA0470600FEDB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BetR/Assets.xcassets; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				13F7E48E1D9F43A900FEDB93 /* BetR.app */,
-				13F7E4A21D9F43A900FEDB93 /* BetTrakTests.xctest */,
-				13F7E4AD1D9F43A900FEDB93 /* BetTrakUITests.xctest */,
+				13F7E4A21D9F43A900FEDB93 /* BetRTests.xctest */,
+				13F7E4AD1D9F43A900FEDB93 /* BetRUITests.xctest */,
 			);
 			name = Products;
 			path = BetR;
@@ -197,7 +197,7 @@
 			);
 			name = BetTrakTests;
 			productName = BetTrakTests;
-			productReference = 13F7E4A21D9F43A900FEDB93 /* BetTrakTests.xctest */;
+			productReference = 13F7E4A21D9F43A900FEDB93 /* BetRTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		13F7E4AC1D9F43A900FEDB93 /* BetTrakUITests */ = {
@@ -215,7 +215,7 @@
 			);
 			name = BetTrakUITests;
 			productName = BetTrakUITests;
-			productReference = 13F7E4AD1D9F43A900FEDB93 /* BetTrakUITests.xctest */;
+			productReference = 13F7E4AD1D9F43A900FEDB93 /* BetRUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -231,14 +231,15 @@
 					13F7E48D1D9F43A900FEDB93 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = MEGG897ETH;
+						LastSwiftMigration = 0810;
 					};
 					13F7E4A11D9F43A900FEDB93 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 13F7E48D1D9F43A900FEDB93;
+						LastSwiftMigration = 0810;
 					};
 					13F7E4AC1D9F43A900FEDB93 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 13F7E48D1D9F43A900FEDB93;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -450,6 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tmc.betrs;
 				PRODUCT_NAME = BetR;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -464,52 +466,53 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tmc.betrs;
 				PRODUCT_NAME = BetR;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		13F7E4BA1D9F43A900FEDB93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BetTrakTests/Info.plist;
+				INFOPLIST_FILE = BetRTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetTrak.app/BetTrak";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetRTests;
+				PRODUCT_NAME = BetRTests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		13F7E4BB1D9F43A900FEDB93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BetTrakTests/Info.plist;
+				INFOPLIST_FILE = BetRTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetTrak.app/BetTrak";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetRTests;
+				PRODUCT_NAME = BetRTests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		13F7E4BD1D9F43A900FEDB93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = BetTrakUITests/Info.plist;
+				INFOPLIST_FILE = BetRUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BetTrak;
+				PRODUCT_NAME = BetRUITests;
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		13F7E4BE1D9F43A900FEDB93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = BetTrakUITests/Info.plist;
+				INFOPLIST_FILE = BetRUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.BetTrakUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BetTrak;
+				PRODUCT_NAME = BetRUITests;
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

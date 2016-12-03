@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13F7E4A11D9F43A900FEDB93"
-               BuildableName = "BetTrakTests.xctest"
+               BuildableName = "BetRTests.xctest"
                BlueprintName = "BetTrakTests"
                ReferencedContainer = "container:BetR.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13F7E4AC1D9F43A900FEDB93"
-               BuildableName = "BetTrakUITests.xctest"
+               BuildableName = "BetRUITests.xctest"
                BlueprintName = "BetTrakUITests"
                ReferencedContainer = "container:BetR.xcodeproj">
             </BuildableReference>
