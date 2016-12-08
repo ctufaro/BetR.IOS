@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13F7E48D1D9F43A900FEDB93"
                BuildableName = "BetR.app"
-               BlueprintName = "BetTrak"
+               BlueprintName = "BetR"
                ReferencedContainer = "container:BetR.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13F7E4A11D9F43A900FEDB93"
                BuildableName = "BetRTests.xctest"
-               BlueprintName = "BetTrakTests"
+               BlueprintName = "BetRTests"
                ReferencedContainer = "container:BetR.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13F7E4AC1D9F43A900FEDB93"
                BuildableName = "BetRUITests.xctest"
-               BlueprintName = "BetTrakUITests"
+               BlueprintName = "BetRUITests"
                ReferencedContainer = "container:BetR.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -54,7 +54,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13F7E48D1D9F43A900FEDB93"
             BuildableName = "BetR.app"
-            BlueprintName = "BetTrak"
+            BlueprintName = "BetR"
             ReferencedContainer = "container:BetR.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,7 +77,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13F7E48D1D9F43A900FEDB93"
             BuildableName = "BetR.app"
-            BlueprintName = "BetTrak"
+            BlueprintName = "BetR"
             ReferencedContainer = "container:BetR.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,7 +96,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13F7E48D1D9F43A900FEDB93"
             BuildableName = "BetR.app"
-            BlueprintName = "BetTrak"
+            BlueprintName = "BetR"
             ReferencedContainer = "container:BetR.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

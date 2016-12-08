@@ -165,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13F7E48D1D9F43A900FEDB93 /* BetTrak */ = {
+		13F7E48D1D9F43A900FEDB93 /* BetR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrak" */;
+			buildConfigurationList = 13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetR" */;
 			buildPhases = (
 				13F7E48A1D9F43A900FEDB93 /* Sources */,
 				13F7E48B1D9F43A900FEDB93 /* Frameworks */,
@@ -177,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = BetTrak;
+			name = BetR;
 			productName = BetTrak;
 			productReference = 13F7E48E1D9F43A900FEDB93 /* BetR.app */;
 			productType = "com.apple.product-type.application";
 		};
-		13F7E4A11D9F43A900FEDB93 /* BetTrakTests */ = {
+		13F7E4A11D9F43A900FEDB93 /* BetRTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13F7E4B91D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakTests" */;
+			buildConfigurationList = 13F7E4B91D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetRTests" */;
 			buildPhases = (
 				13F7E49E1D9F43A900FEDB93 /* Sources */,
 				13F7E49F1D9F43A900FEDB93 /* Frameworks */,
@@ -195,14 +195,14 @@
 			dependencies = (
 				13F7E4A41D9F43A900FEDB93 /* PBXTargetDependency */,
 			);
-			name = BetTrakTests;
+			name = BetRTests;
 			productName = BetTrakTests;
 			productReference = 13F7E4A21D9F43A900FEDB93 /* BetRTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13F7E4AC1D9F43A900FEDB93 /* BetTrakUITests */ = {
+		13F7E4AC1D9F43A900FEDB93 /* BetRUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13F7E4BC1D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakUITests" */;
+			buildConfigurationList = 13F7E4BC1D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetRUITests" */;
 			buildPhases = (
 				13F7E4A91D9F43A900FEDB93 /* Sources */,
 				13F7E4AA1D9F43A900FEDB93 /* Frameworks */,
@@ -213,7 +213,7 @@
 			dependencies = (
 				13F7E4AF1D9F43A900FEDB93 /* PBXTargetDependency */,
 			);
-			name = BetTrakUITests;
+			name = BetRUITests;
 			productName = BetTrakUITests;
 			productReference = 13F7E4AD1D9F43A900FEDB93 /* BetRUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -256,9 +256,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13F7E48D1D9F43A900FEDB93 /* BetTrak */,
-				13F7E4A11D9F43A900FEDB93 /* BetTrakTests */,
-				13F7E4AC1D9F43A900FEDB93 /* BetTrakUITests */,
+				13F7E48D1D9F43A900FEDB93 /* BetR */,
+				13F7E4A11D9F43A900FEDB93 /* BetRTests */,
+				13F7E4AC1D9F43A900FEDB93 /* BetRUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,12 +327,12 @@
 /* Begin PBXTargetDependency section */
 		13F7E4A41D9F43A900FEDB93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13F7E48D1D9F43A900FEDB93 /* BetTrak */;
+			target = 13F7E48D1D9F43A900FEDB93 /* BetR */;
 			targetProxy = 13F7E4A31D9F43A900FEDB93 /* PBXContainerItemProxy */;
 		};
 		13F7E4AF1D9F43A900FEDB93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13F7E48D1D9F43A900FEDB93 /* BetTrak */;
+			target = 13F7E48D1D9F43A900FEDB93 /* BetR */;
 			targetProxy = 13F7E4AE1D9F43A900FEDB93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -528,7 +528,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrak" */ = {
+		13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13F7E4B71D9F43A900FEDB93 /* Debug */,
@@ -537,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13F7E4B91D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakTests" */ = {
+		13F7E4B91D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetRTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13F7E4BA1D9F43A900FEDB93 /* Debug */,
@@ -546,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13F7E4BC1D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetTrakUITests" */ = {
+		13F7E4BC1D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetRUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13F7E4BD1D9F43A900FEDB93 /* Debug */,
