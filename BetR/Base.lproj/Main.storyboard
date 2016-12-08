@@ -413,7 +413,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game Lines" id="Idl-kU-f18">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="CT0-P5-rh2">
+                        <barButtonItem key="rightBarButtonItem" title="Ticket" style="plain" id="CT0-P5-rh2">
                             <connections>
                                 <segue destination="xR0-Av-KoE" kind="show" id="Y65-ku-eEB"/>
                             </connections>

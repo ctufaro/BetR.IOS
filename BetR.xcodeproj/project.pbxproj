@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134B11EB1DF96DFF00CF17A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 134B11EA1DF96DFF00CF17A6 /* Podfile */; };
 		13AD81261DC4E3D80068286E /* GameTrak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E5111DA2115600FEDB93 /* GameTrak.swift */; };
 		13AD81271DC4E3D80068286E /* GameTrakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */; };
 		13AD81281DC4E3D80068286E /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134B11EA1DF96DFF00CF17A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		13555B971DB6E704003A379B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		13AE51EB1DAB06A9006F40BD /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		134B11EC1DF96E1300CF17A6 /* Podfile */ = {
+			isa = PBXGroup;
+			children = (
+				134B11EA1DF96DFF00CF17A6 /* Podfile */,
+			);
+			name = Podfile;
+			sourceTree = "<group>";
+		};
 		13F7E4851D9F43A900FEDB93 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 				13F7E4A51D9F43A900FEDB93 /* BetRTests */,
 				13F7E4B01D9F43A900FEDB93 /* BetRUITests */,
 				13F7E48F1D9F43A900FEDB93 /* Products */,
+				134B11EC1DF96E1300CF17A6 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +281,7 @@
 			files = (
 				13F7E49C1D9F43A900FEDB93 /* LaunchScreen.storyboard in Resources */,
 				13F7E4FC1DA0470600FEDB93 /* Assets.xcassets in Resources */,
+				134B11EB1DF96DFF00CF17A6 /* Podfile in Resources */,
 				13F7E4971D9F43A900FEDB93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
