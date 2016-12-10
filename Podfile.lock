@@ -1,0 +1,21 @@
+PODS:
+  - ACTabScrollView (0.2.4)
+
+DEPENDENCIES:
+  - ACTabScrollView (from `https://github.com/azurechen/ACTabScrollView.git`)
+
+EXTERNAL SOURCES:
+  ACTabScrollView:
+    :git: https://github.com/azurechen/ACTabScrollView.git
+
+CHECKOUT OPTIONS:
+  ACTabScrollView:
+    :commit: f082d7e4a953e1aeacbb61365a2f38e7925a940c
+    :git: https://github.com/azurechen/ACTabScrollView.git
+
+SPEC CHECKSUMS:
+  ACTabScrollView: 0ebfd66ebe1eab4e794e3a973c0f2d556dd51ad0
+
+PODFILE CHECKSUM: 7af75a78b48694743dcb053dead25eb41395f2ec
+
+COCOAPODS: 1.1.1

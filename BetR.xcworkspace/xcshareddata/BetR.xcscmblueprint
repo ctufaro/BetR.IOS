@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F1ACDC3443AF70822F1BF2D146119641F6E446CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "21780EAA852979C7E2DAF1541CB65F573821E9C3" : 9223372036854775807,
+    "F1ACDC3443AF70822F1BF2D146119641F6E446CB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "ADE14CEA-9E15-4451-B0EA-2F60BA2AED1D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "21780EAA852979C7E2DAF1541CB65F573821E9C3" : "ACTabScrollView\/",
+    "F1ACDC3443AF70822F1BF2D146119641F6E446CB" : "BetR.IOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BetR",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BetR.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/azurechen\/ACTabScrollView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "21780EAA852979C7E2DAF1541CB65F573821E9C3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/www.github.com\/ctufaro\/BetR.IOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F1ACDC3443AF70822F1BF2D146119641F6E446CB"
+    }
+  ]
+}

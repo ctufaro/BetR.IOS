@@ -8,71 +8,84 @@
 
 import UIKit
 
-class GameSelectViewController: UIViewController {
-
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblTitle2: UILabel!
-    
-    var title1 = String()
-    var title2 = String()
-    var moneyHome = String()
-    var spreadHome = String()
-    var moneyVisit = String()
-    var spreadVisit = String()
-    var overUnder = String()
-    var overUnder2 = String()
-    
-    let checkedImage = UIImage(named: "checkbox-sel")! as UIImage
-    let uncheckedImage = UIImage(named: "checkbox")! as UIImage
-    
-    @IBOutlet weak var txtMoneyHome: UITextField!
-    
-    @IBOutlet weak var txtSpreadHome: UITextField!
-    
-    @IBOutlet weak var txtMoneyVisit: UITextField!
-    
-    @IBOutlet weak var txtSpreadVisit: UITextField!
-    
-    @IBOutlet weak var txtOverUnder: UITextField!
-    
-    @IBOutlet weak var txtOverUnder2: UITextField!
+class GameSelectViewController: UIViewController, ACTabScrollViewDelegate, ACTabScrollViewDataSource  {
 
     
     
-    
-    
-    
+    @IBOutlet weak var tabScrollView: ACTabScrollView!
+    var contentViews: [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // set ACTabScrollView, all the following properties are optional
+        tabScrollView.defaultPage = 1
+        tabScrollView.arrowIndicator = true
+        //        tabScrollView.tabSectionHeight = 40
+        //        tabScrollView.tabSectionBackgroundColor = UIColor.whiteColor()
+        //        tabScrollView.contentSectionBackgroundColor = UIColor.whiteColor()
+        //        tabScrollView.tabGradient = true
+        //        tabScrollView.pagingEnabled = true
+        //        tabScrollView.cachedPageLimit = 3
+        
+        tabScrollView.delegate = self
+        tabScrollView.dataSource = self
+        
+        // create content views from storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        for category in BetCategory.allValues() {
+            let vc = storyboard.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
+            vc.category = category
+            
+            addChildViewController(vc) // don't forget, it's very important
+            contentViews.append(vc.view)
+        }
+        
+        // set navigation bar appearance
+        /*if let navigationBar = self.navigationController?.navigationBar {
+            navigationBar.isTranslucent = false
+            navigationBar.tintColor = UIColor.white
+            navigationBar.barTintColor = UIColor(red: 38.0 / 255, green: 191.0 / 255, blue: 140.0 / 255, alpha: 1)
+            navigationBar.titleTextAttributes = NSDictionary(object: UIColor.white, forKey: NSForegroundColorAttributeName as NSCopying) as? [String : AnyObject]
+            navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            navigationBar.shadowImage = UIImage()
+        }
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent*/
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        lblTitle.text = title1
-        lblTitle2.text = title2
-        txtMoneyHome.text = moneyHome
-        txtSpreadHome.text = spreadHome
-        txtMoneyVisit.text = moneyVisit
-        txtSpreadVisit.text = spreadVisit
-        txtOverUnder.text = overUnder
-        txtOverUnder2.text = overUnder
+    // MARK: ACTabScrollViewDelegate
+    func tabScrollView(_ tabScrollView: ACTabScrollView, didChangePageTo index: Int) {
+        print(index)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tabScrollView(_ tabScrollView: ACTabScrollView, didScrollPageTo index: Int) {
     }
-    */
-
+    
+    // MARK: ACTabScrollViewDataSource
+    func numberOfPagesInTabScrollView(_ tabScrollView: ACTabScrollView) -> Int {
+        return BetCategory.allValues().count
+    }
+    
+    func tabScrollView(_ tabScrollView: ACTabScrollView, tabViewForPageAtIndex index: Int) -> UIView {
+        // create a label
+        let label = UILabel()
+        label.text = String(describing: BetCategory.allValues()[index]).uppercased()
+        if #available(iOS 8.2, *) {
+            label.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)
+        } else {
+            label.font = UIFont.systemFont(ofSize: 16)
+        }
+        label.textColor = UIColor(red: 77.0 / 255, green: 79.0 / 255, blue: 84.0 / 255, alpha: 1)
+        label.textAlignment = .center
+        
+        // if the size of your tab is not fixed, you can adjust the size by the following way.
+        label.sizeToFit() // resize the label to the size of content
+        label.frame.size = CGSize(width: label.frame.size.width + 28, height: label.frame.size.height + 36) // add some paddings
+        
+        return label
+    }
+    
+    func tabScrollView(_ tabScrollView: ACTabScrollView, contentViewForPageAtIndex index: Int) -> UIView {
+        return contentViews[index]
+    }
 }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		134B11EB1DF96DFF00CF17A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 134B11EA1DF96DFF00CF17A6 /* Podfile */; };
+		135BBDC11DFA4D9D0079C39A /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */; };
+		135BBDC21DFA4D9D0079C39A /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDC01DFA4D9D0079C39A /* MockData.swift */; };
+		135BBDC41DFC147C0079C39A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDC31DFC147C0079C39A /* Theme.swift */; };
+		13A2C8AC1DF9700D00F022DC /* ACTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */; };
+		13A2C8AD1DF9700D00F022DC /* ACTabScrollView+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C8AB1DF9700D00F022DC /* ACTabScrollView+Protocol.swift */; };
 		13AD81261DC4E3D80068286E /* GameTrak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E5111DA2115600FEDB93 /* GameTrak.swift */; };
 		13AD81271DC4E3D80068286E /* GameTrakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */; };
 		13AD81281DC4E3D80068286E /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */; };
@@ -21,6 +26,7 @@
 		13F7E4A71D9F43A900FEDB93 /* BetRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */; };
 		13F7E4B21D9F43A900FEDB93 /* BetRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4B11D9F43A900FEDB93 /* BetRUITests.swift */; };
 		13F7E4FC1DA0470600FEDB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E4FB1DA0470600FEDB93 /* Assets.xcassets */; };
+		C4551EA00EFE62B287F5D9EC /* Pods_BetR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0D8007243B416F8AA98E06 /* Pods_BetR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,11 @@
 /* Begin PBXFileReference section */
 		134B11EA1DF96DFF00CF17A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		13555B971DB6E704003A379B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		135BBDC01DFA4D9D0079C39A /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		135BBDC31DFC147C0079C39A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTabScrollView.swift; sourceTree = "<group>"; };
+		13A2C8AB1DF9700D00F022DC /* ACTabScrollView+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ACTabScrollView+Protocol.swift"; sourceTree = "<group>"; };
 		13AE51EB1DAB06A9006F40BD /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		13F7E48E1D9F43A900FEDB93 /* BetR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +72,9 @@
 		13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTrakTableViewCell.swift; sourceTree = "<group>"; };
 		13F7E5111DA2115600FEDB93 /* GameTrak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTrak.swift; sourceTree = "<group>"; };
+		318BEE9A7ED38E305E833618 /* Pods-BetR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetR/Pods-BetR.release.xcconfig"; sourceTree = "<group>"; };
+		75586721F6DEEE1763B98A28 /* Pods-BetR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetR/Pods-BetR.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0D8007243B416F8AA98E06 /* Pods_BetR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4551EA00EFE62B287F5D9EC /* Pods_BetR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11AE903046EEFE8C22588D75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75586721F6DEEE1763B98A28 /* Pods-BetR.debug.xcconfig */,
+				318BEE9A7ED38E305E833618 /* Pods-BetR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		134B11EC1DF96E1300CF17A6 /* Podfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +128,8 @@
 				13F7E4B01D9F43A900FEDB93 /* BetRUITests */,
 				13F7E48F1D9F43A900FEDB93 /* Products */,
 				134B11EC1DF96E1300CF17A6 /* Podfile */,
+				11AE903046EEFE8C22588D75 /* Pods */,
+				8785731AB3D6AF0B47CD504E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,14 +176,19 @@
 		13F7E5011DA1D2BE00FEDB93 /* Swift Classes */ = {
 			isa = PBXGroup;
 			children = (
-				13F7E5111DA2115600FEDB93 /* GameTrak.swift */,
-				13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */,
-				13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */,
+				13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */,
+				13A2C8AB1DF9700D00F022DC /* ACTabScrollView+Protocol.swift */,
 				13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */,
-				13F7E4931D9F43A900FEDB93 /* ViewController.swift */,
-				13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */,
 				13AE51EB1DAB06A9006F40BD /* Checkbox.swift */,
+				135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */,
 				13555B971DB6E704003A379B /* Extensions.swift */,
+				13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */,
+				13F7E5111DA2115600FEDB93 /* GameTrak.swift */,
+				13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */,
+				13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */,
+				135BBDC01DFA4D9D0079C39A /* MockData.swift */,
+				135BBDC31DFC147C0079C39A /* Theme.swift */,
+				13F7E4931D9F43A900FEDB93 /* ViewController.swift */,
 			);
 			name = "Swift Classes";
 			path = BetR;
@@ -173,6 +204,14 @@
 			path = BetR;
 			sourceTree = "<group>";
 		};
+		8785731AB3D6AF0B47CD504E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D0D8007243B416F8AA98E06 /* Pods_BetR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13F7E4B61D9F43A900FEDB93 /* Build configuration list for PBXNativeTarget "BetR" */;
 			buildPhases = (
+				545293DF6C073B31F489FD02 /* [CP] Check Pods Manifest.lock */,
 				13F7E48A1D9F43A900FEDB93 /* Sources */,
 				13F7E48B1D9F43A900FEDB93 /* Frameworks */,
 				13F7E48C1D9F43A900FEDB93 /* Resources */,
+				543D415D1754A52FD8F88449 /* [CP] Embed Pods Frameworks */,
+				15234C3E00D1DDF62968E1D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,19 +344,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15234C3E00D1DDF62968E1D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetR/Pods-BetR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		543D415D1754A52FD8F88449 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetR/Pods-BetR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		545293DF6C073B31F489FD02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13F7E48A1D9F43A900FEDB93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				13AD81261DC4E3D80068286E /* GameTrak.swift in Sources */,
+				135BBDC21DFA4D9D0079C39A /* MockData.swift in Sources */,
 				13AD81271DC4E3D80068286E /* GameTrakTableViewCell.swift in Sources */,
 				13AD81281DC4E3D80068286E /* GameSelectViewController.swift in Sources */,
+				135BBDC41DFC147C0079C39A /* Theme.swift in Sources */,
 				13AD81291DC4E3D80068286E /* AppDelegate.swift in Sources */,
 				13AD812A1DC4E3D80068286E /* ViewController.swift in Sources */,
+				13A2C8AD1DF9700D00F022DC /* ACTabScrollView+Protocol.swift in Sources */,
 				13AD812B1DC4E3D80068286E /* HomeController.swift in Sources */,
 				13AD812C1DC4E3D80068286E /* Checkbox.swift in Sources */,
+				135BBDC11DFA4D9D0079C39A /* ContentViewController.swift in Sources */,
 				13AD812D1DC4E3D80068286E /* Extensions.swift in Sources */,
+				13A2C8AC1DF9700D00F022DC /* ACTabScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +549,7 @@
 		};
 		13F7E4B71D9F43A900FEDB93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75586721F6DEEE1763B98A28 /* Pods-BetR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -469,6 +565,7 @@
 		};
 		13F7E4B81D9F43A900FEDB93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 318BEE9A7ED38E305E833618 /* Pods-BetR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

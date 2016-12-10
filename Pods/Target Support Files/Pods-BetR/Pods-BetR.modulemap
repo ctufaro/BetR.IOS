@@ -1,0 +1,6 @@
+framework module Pods_BetR {
+  umbrella header "Pods-BetR-umbrella.h"
+
+  export *
+  module * { export * }
+}
