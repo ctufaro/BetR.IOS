@@ -18,8 +18,8 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        //tableView.estimatedRowHeight = 144
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -38,13 +38,13 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
         // set the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ContentTableViewCell
         //cell.thumbnailImageView.image = UIImage(named: "thumbnail-\(news.id)")
-        cell.thumbnailImageView.layer.cornerRadius = 4
+        //cell.thumbnailImageView.layer.cornerRadius = 4
         cell.titleLabel.text = news.title
         cell.categoryLabel.text = String(describing: news.category)
-        cell.categoryView.layer.backgroundColor = UIColor.white.cgColor
+        /*cell.categoryView.layer.backgroundColor = UIColor.white.cgColor
         cell.categoryView.layer.cornerRadius = 4
         cell.categoryView.layer.borderWidth = 1
-        cell.categoryView.layer.borderColor = UIColor(red: 238.0 / 255, green: 238.0 / 255, blue: 238.0 / 255, alpha: 1.0).cgColor
+        cell.categoryView.layer.borderColor = UIColor(red: 238.0 / 255, green: 238.0 / 255, blue: 238.0 / 255, alpha: 1.0).cgColor*/
         
         return cell
     }
@@ -77,11 +77,9 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 class ContentTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var categoryView: UIView!
+    //@IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
-    
+    @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         self.selectionStyle = .none
     }

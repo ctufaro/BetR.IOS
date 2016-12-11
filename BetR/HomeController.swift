@@ -33,6 +33,8 @@ class HomeController: UIViewController, UITableViewDelegate{
         }
     }
     
+    
+    
     func GetGameData(){
         var teamHome = ""
         var teamVisiting = ""
