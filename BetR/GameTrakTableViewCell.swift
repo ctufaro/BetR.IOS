@@ -21,6 +21,8 @@ class GameTrakTableViewCell: UITableViewCell {
     @IBOutlet weak var btnVisitSpread: UIButton!
     @IBOutlet weak var btnVisitTotal: UIButton!
     
+    static var sharedGames : [GameTrakSelections] = []
+    
     var red = 115
     var green = 224
     var blue = 179
@@ -61,16 +63,20 @@ class GameTrakTableViewCell: UITableViewCell {
     
     func WireButton(_ button:UIButton, row:Int, field:String){
         
-        //REFACTOR THIS
+        let selectedGameLine:GameTrak = HomeController.sharedGames[row]
+        
+        let HomeTeam : String = selectedGameLine.TeamHome
+        let AwayTeam : String = selectedGameLine.TeamVisiting
+        let GameDate : String = selectedGameLine.EventDate
+        let Versus : String = HomeTeam + " vs " + AwayTeam
         
         var toggle:Bool = false
         
         if button.backgroundColor == UIColor(red: red, green: green, blue: blue){
-            
             toggle = false
             button.backgroundColor = UIColor(red: 224, green: 224, blue: 224)
-            
         }
+            
         else{
             toggle = true
             button.backgroundColor = UIColor(red: red, green: green, blue: blue)
@@ -78,21 +84,45 @@ class GameTrakTableViewCell: UITableViewCell {
         
         switch field {
         case "HomeMoney":
+            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.MoneyLineHome)
             HomeController.buttonStates[row]!.buttonHomeMoney = toggle
         case "HomeSpread":
+            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.SpreadHome)
             HomeController.buttonStates[row]!.buttonHomeSpread = toggle
         case "HomeTotal":
+            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.OverAdjust)
             HomeController.buttonStates[row]!.buttonHomeOU = toggle
         case "VisitMoney":
+            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.MoneyLineVisiting)
             HomeController.buttonStates[row]!.buttonVisitMoney = toggle
         case "VisitSpread":
+            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.SpreadVisiting)
             HomeController.buttonStates[row]!.buttonVisitSpread = toggle
         case "VisitTotal":
+            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.OverAdjust)
             HomeController.buttonStates[row]!.buttonVisitOU = toggle
         default:
             toggle = true
         }
         
+    }
+    
+    func AddRemoveGames(toggle: Bool, team: String, versus:String, gameDate:String, data:String){
+        let selItem : GameTrakSelections = GameTrakSelections(Team:team,Versus:versus,GameDate:gameDate,Data:data)
+        let selInd = GameTrakTableViewCell.sharedGames.index(where: {$0.Equalz(Team: team, Versus: versus, GameDate: gameDate, Data: data)})
+
+        if toggle{
+            GameTrakTableViewCell.sharedGames.append(selItem)
+        }
+        else{
+            GameTrakTableViewCell.sharedGames.remove(at: selInd!)
+        }
+        
+        print("-----------------")
+        for item in GameTrakTableViewCell.sharedGames {
+            print(item.Team + " : " + item.Versus + " : " + item.GameDate + " : " + item.Data)
+        }
+        print("-----------------")
     }
     
     

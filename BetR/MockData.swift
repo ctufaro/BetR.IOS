@@ -14,6 +14,8 @@ class MockData {
         News(id: 1, category: .parlays, title: "This wager combines 2 to 15 picks into one bet, increasing your potential payout"),
         News(id: 2, category: .teasers, title: "This wager combines 2 to 15 picks where you can adjust the odds by a predetermined amount of points"),
         News(id: 3, category: .straight, title: "San Diego Chargers vs Carolina Panthers"),
+        News(id: 4, category: .teasers, title: "This wager combines 2 to 15 picks where you can adjust the odds by a predetermined amount of points"),
+        News(id: 5, category: .teasers, title: "This wager combines 2 to 15 picks where you can adjust the odds by a predetermined amount of points"),
         /*News(id: 4, category: .sport, title: "What makes Bayern so special?"),
         News(id: 5, category: .entertainment, title: "Happy 30th anniversary 'Top Gun'!"),
         News(id: 6, category: .travel, title: "How to cook like Asia's best female chef"),

@@ -6,20 +6,16 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var category: BetCategory? {
         didSet {
-            for news in MockData.betArray {
-                if (news.category == category || category == .all) {
-                    newsArray.append(news)
-                }
+            for game in GameTrakTableViewCell.sharedGames {
+                gamesArray.append(game)
             }
         }
     }
-    var newsArray: [News] = []
+    
+    var gamesArray: [GameTrakSelections] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.estimatedRowHeight = 144
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -29,23 +25,18 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsArray.count
+        return gamesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let news = newsArray[(indexPath as NSIndexPath).row]
+        let game = gamesArray[(indexPath as NSIndexPath).row]
         
         // set the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ContentTableViewCell
-        //cell.thumbnailImageView.image = UIImage(named: "thumbnail-\(news.id)")
-        //cell.thumbnailImageView.layer.cornerRadius = 4
-        cell.titleLabel.text = news.title
-        cell.categoryLabel.text = String(describing: news.category)
-        /*cell.categoryView.layer.backgroundColor = UIColor.white.cgColor
-        cell.categoryView.layer.cornerRadius = 4
-        cell.categoryView.layer.borderWidth = 1
-        cell.categoryView.layer.borderColor = UIColor(red: 238.0 / 255, green: 238.0 / 255, blue: 238.0 / 255, alpha: 1.0).cgColor*/
-        
+        cell.teamLabel.text = game.Team
+        cell.versusLabel.text = game.Versus
+        cell.gameDateLabel.text = game.GameDate
+        cell.dataPieceLabel.text = game.Data
         return cell
     }
     
@@ -77,9 +68,10 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 class ContentTableViewCell: UITableViewCell {
     
-    //@IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var versusLabel: UILabel!
+    @IBOutlet weak var gameDateLabel: UILabel!
+    @IBOutlet weak var dataPieceLabel: UILabel!
     override func awakeFromNib() {
         self.selectionStyle = .none
     }

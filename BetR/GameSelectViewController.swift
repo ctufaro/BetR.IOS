@@ -11,23 +11,18 @@ import UIKit
 class GameSelectViewController: UIViewController, ACTabScrollViewDelegate, ACTabScrollViewDataSource  {
 
     
+    @IBOutlet weak var button: UIButton!
     
     @IBOutlet weak var tabScrollView: ACTabScrollView!
     var contentViews: [UIView] = []
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
         
         // set ACTabScrollView, all the following properties are optional
         tabScrollView.defaultPage = 1
         tabScrollView.arrowIndicator = true
-        //        tabScrollView.tabSectionHeight = 40
-        //        tabScrollView.tabSectionBackgroundColor = UIColor.whiteColor()
-        //        tabScrollView.contentSectionBackgroundColor = UIColor.whiteColor()
-        //        tabScrollView.tabGradient = true
-        //        tabScrollView.pagingEnabled = true
-        //        tabScrollView.cachedPageLimit = 3
-        
         tabScrollView.delegate = self
         tabScrollView.dataSource = self
         
@@ -40,17 +35,6 @@ class GameSelectViewController: UIViewController, ACTabScrollViewDelegate, ACTab
             addChildViewController(vc) // don't forget, it's very important
             contentViews.append(vc.view)
         }
-        
-        // set navigation bar appearance
-        /*if let navigationBar = self.navigationController?.navigationBar {
-            navigationBar.isTranslucent = false
-            navigationBar.tintColor = UIColor.white
-            navigationBar.barTintColor = UIColor(red: 38.0 / 255, green: 191.0 / 255, blue: 140.0 / 255, alpha: 1)
-            navigationBar.titleTextAttributes = NSDictionary(object: UIColor.white, forKey: NSForegroundColorAttributeName as NSCopying) as? [String : AnyObject]
-            navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            navigationBar.shadowImage = UIImage()
-        }
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent*/
     }
     
     // MARK: ACTabScrollViewDelegate

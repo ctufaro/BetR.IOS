@@ -10,15 +10,23 @@ import UIKit
 
 class HomeController: UIViewController, UITableViewDelegate{
 
-    
+    //custom cyanish color
     var red = 115
     var green = 224
     var blue = 179
     
+    //main table for gamelines
     @IBOutlet weak var tblView: UITableView!
     
+    
     @IBOutlet weak var actIndicator: UIActivityIndicatorView!
+    
+    
+    //main array to store loaded gamelines
     var items : [GameTrak] = []
+    
+    static var sharedGames : [GameTrak] = []
+    
     static var buttonStates = Dictionary<Int, GameTrakButtonStates>()
         
     override func viewDidLoad() {
@@ -32,8 +40,6 @@ class HomeController: UIViewController, UITableViewDelegate{
             self.tblView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
-    
     
     func GetGameData(){
         var teamHome = ""
@@ -102,13 +108,14 @@ class HomeController: UIViewController, UITableViewDelegate{
                             
  
                             self.items.append(GameTrak(TeamHome: teamHome, TeamVisiting: teamVisiting, EventDate: newEventDate, SpreadHome:spreadHome, SpreadVisiting:spreadVisiting, TotalPoints:totalPoints, OverAdjust:overAdjust, UnderAdjust:underAdjust, MoneyLineHome:moneyLineHome, MoneyLineVisiting:moneyLineVisiting))
-                            print("----")
+                            //print("----")
                         }
                     }
                     DispatchQueue.main.async(execute: {
                         self.tblView.reloadData()
                         self.actIndicator.stopAnimating()
                         self.actIndicator.hidesWhenStopped = true
+                        HomeController.sharedGames = self.items
                     })
                     
                 } catch{
@@ -125,18 +132,7 @@ class HomeController: UIViewController, UITableViewDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*
-        if  segue.identifier == "ShowGameSegue", let destination = segue.destinationViewController as? GameSelectViewController,
-            blogIndex = tblView.indexPathForSelectedRow?.row {
-            destination.title1 = items[blogIndex].TeamHome
-            destination.title2 = items[blogIndex].TeamVisiting
-            destination.moneyHome = items[blogIndex].MoneyLineHome
-            destination.spreadHome = items[blogIndex].SpreadHome
-            destination.moneyVisit = items[blogIndex].MoneyLineVisiting
-            destination.spreadVisit = items[blogIndex].SpreadVisiting
-            destination.overUnder = items[blogIndex].OverAdjust
-        }
-        */
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -193,6 +189,7 @@ class HomeController: UIViewController, UITableViewDelegate{
     }
     
     func CheckButtonStates(_ row:Int, cell:GameTrakTableViewCell){
+        
         //REFACTOR THIS
         let buttonHomeMoneyState = HomeController.buttonStates[row]?.buttonHomeMoney
         if (buttonHomeMoneyState != nil){

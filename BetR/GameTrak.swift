@@ -65,3 +65,22 @@ struct GameTrakButtonStates {
     }
     
 }
+
+class GameTrakSelections{
+    var Team : String
+    var Versus : String
+    var GameDate : String
+    var Data : String
+    
+    init(Team: String, Versus: String, GameDate:String, Data:String){
+        self.Team = Team
+        self.Versus = Versus
+        self.GameDate = GameDate
+        self.Data = Data
+    }
+    
+    func Equalz(Team: String, Versus: String, GameDate: String, Data: String) -> Bool {
+        return self.Team == Team && self.Versus == Versus && self.GameDate == GameDate && self.Data == Data
+    }
+    
+}
