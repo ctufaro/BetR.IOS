@@ -21,6 +21,7 @@
 		13AD812B1DC4E3D80068286E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */; };
 		13AD812C1DC4E3D80068286E /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE51EB1DAB06A9006F40BD /* Checkbox.swift */; };
 		13AD812D1DC4E3D80068286E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13555B971DB6E704003A379B /* Extensions.swift */; };
+		13B9A3161DFE1EB500A22636 /* BlankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B9A3151DFE1EB500A22636 /* BlankController.swift */; };
 		13F7E4971D9F43A900FEDB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E4951D9F43A900FEDB93 /* Main.storyboard */; };
 		13F7E49C1D9F43A900FEDB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F7E49A1D9F43A900FEDB93 /* LaunchScreen.storyboard */; };
 		13F7E4A71D9F43A900FEDB93 /* BetRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7E4A61D9F43A900FEDB93 /* BetRTests.swift */; };
@@ -56,6 +57,7 @@
 		13A2C8AB1DF9700D00F022DC /* ACTabScrollView+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ACTabScrollView+Protocol.swift"; sourceTree = "<group>"; };
 		13AE51EB1DAB06A9006F40BD /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
+		13B9A3151DFE1EB500A22636 /* BlankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankController.swift; sourceTree = "<group>"; };
 		13F7E48E1D9F43A900FEDB93 /* BetR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F7E4931D9F43A900FEDB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */,
 				13A2C8AB1DF9700D00F022DC /* ACTabScrollView+Protocol.swift */,
 				13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */,
+				13B9A3151DFE1EB500A22636 /* BlankController.swift */,
 				13AE51EB1DAB06A9006F40BD /* Checkbox.swift */,
 				135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */,
 				13555B971DB6E704003A379B /* Extensions.swift */,
@@ -399,6 +402,7 @@
 			files = (
 				13AD81261DC4E3D80068286E /* GameTrak.swift in Sources */,
 				135BBDC21DFA4D9D0079C39A /* MockData.swift in Sources */,
+				13B9A3161DFE1EB500A22636 /* BlankController.swift in Sources */,
 				13AD81271DC4E3D80068286E /* GameTrakTableViewCell.swift in Sources */,
 				13AD81281DC4E3D80068286E /* GameSelectViewController.swift in Sources */,
 				135BBDC41DFC147C0079C39A /* Theme.swift in Sources */,

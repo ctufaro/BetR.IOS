@@ -34,11 +34,13 @@ enum BetCategory {
     case parlays
     case teasers
     case straight
-    case all
+    //case all
 
     
     static func allValues() -> [BetCategory] {
-        return [.parlays, .straight, .teasers, .all]
+        //return [.parlays, .straight, .teasers, .all]
+        return [.parlays, .straight, .teasers]
+
     }
 }
 

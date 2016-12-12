@@ -1,16 +1,9 @@
 import UIKit
 
-class ContentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BlankController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var category: BetCategory? {
-        didSet {
-            for game in GameTrakTableViewCell.sharedGames {
-                gamesArray.append(game)
-            }
-        }
-    }
     
     var gamesArray: [GameTrakSelections] = []
     
@@ -25,18 +18,14 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gamesArray.count
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let game = gamesArray[(indexPath as NSIndexPath).row]
-        
+    
         // set the cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ContentTableViewCell
-        cell.teamLabel.text = game.Team
-        cell.versusLabel.text = game.Versus
-        cell.gameDateLabel.text = game.GameDate
-        cell.dataPieceLabel.text = game.Data
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BlankCell") as! BlankTableViewCell
+        cell.msgLabel.text = "Not Supported"
         return cell
     }
     
@@ -49,7 +38,7 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
         view.backgroundColor = UIColor(red: 61.0 / 255, green: 66.0 / 255, blue: 77.0 / 255, alpha: 1.0)
         
         let label = UILabel()
-        label.text = "Straight Wagers"
+        label.text = "Bet Type Not Supported"
         label.textColor = UIColor.white
         if #available(iOS 8.2, *) {
             label.font = UIFont.systemFont(ofSize: 17, weight: UIFontWeightThin)
@@ -66,12 +55,11 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 }
 
-class ContentTableViewCell: UITableViewCell {
+
+class BlankTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var teamLabel: UILabel!
-    @IBOutlet weak var versusLabel: UILabel!
-    @IBOutlet weak var gameDateLabel: UILabel!
-    @IBOutlet weak var dataPieceLabel: UILabel!
+    @IBOutlet weak var msgLabel: UILabel!
+
     override func awakeFromNib() {
         self.selectionStyle = .none
     }

@@ -591,7 +591,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qK-xb-yAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3460" y="-1083.5082458770617"/>
+            <point key="canvasLocation" x="3433" y="-1083"/>
+        </scene>
+        <!--Blank Controller-->
+        <scene sceneID="eqj-Lh-NIf">
+            <objects>
+                <viewController storyboardIdentifier="BlankController" id="drU-Q3-dnb" customClass="BlankController" customModule="BetR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tbo-QW-RUd"/>
+                        <viewControllerLayoutGuide type="bottom" id="44H-cA-7LO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wVN-3m-9Ui">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="108" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="HHM-yr-cAh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlankCell" rowHeight="108" id="zXa-Un-mpA" customClass="BlankTableViewCell" customModule="BetR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="600" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="zXa-Un-mpA" id="ZFa-Hn-mbC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Supported" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLz-Fo-FzH">
+                                                    <rect key="frame" x="15" y="31" width="249" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="msgLabel" destination="RLz-Fo-FzH" id="sW2-ux-X70"/>
+                                            <outlet property="teamLabel" destination="RLz-Fo-FzH" id="kqm-6a-LDm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HHM-yr-cAh" firstAttribute="top" secondItem="Tbo-QW-RUd" secondAttribute="bottom" id="BdA-vh-zNO"/>
+                            <constraint firstItem="HHM-yr-cAh" firstAttribute="leading" secondItem="wVN-3m-9Ui" secondAttribute="leading" id="Fqa-Dt-3Bu"/>
+                            <constraint firstAttribute="trailing" secondItem="HHM-yr-cAh" secondAttribute="trailing" id="Olg-Tx-e8v"/>
+                            <constraint firstItem="44H-cA-7LO" firstAttribute="top" secondItem="HHM-yr-cAh" secondAttribute="bottom" id="e9H-gn-qpE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="HHM-yr-cAh" id="nLh-dy-GVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjQ-2i-thH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4172" y="-1082"/>
         </scene>
     </scenes>
     <resources>

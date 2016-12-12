@@ -29,11 +29,19 @@ class GameSelectViewController: UIViewController, ACTabScrollViewDelegate, ACTab
         // create content views from storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         for category in BetCategory.allValues() {
-            let vc = storyboard.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
-            vc.category = category
             
-            addChildViewController(vc) // don't forget, it's very important
-            contentViews.append(vc.view)
+            if(category == BetCategory.straight){
+                let vc = storyboard.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
+                vc.category = category
+                addChildViewController(vc) // don't forget, it's very important
+                contentViews.append(vc.view)
+            }
+            else{
+                let vc = storyboard.instantiateViewController(withIdentifier: "BlankController") as! BlankController
+                addChildViewController(vc) // don't forget, it's very important
+                contentViews.append(vc.view)
+            }
+
         }
     }
     
