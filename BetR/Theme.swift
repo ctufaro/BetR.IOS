@@ -77,7 +77,7 @@ struct ThemeManager {
         let sharedApplication = UIApplication.shared
         //sharedApplication.delegate?.window??.tintColor = UIColor.gray
         UINavigationBar.appearance().barStyle = UIBarStyle.blackTranslucent
-        //UINavigationBar.appearance().tintColor = UIColor.cyan
-        
+        UINavigationBar.appearance().tintColor = UIColor(red: 115, green: 224, blue: 179)
+
     }
 }
