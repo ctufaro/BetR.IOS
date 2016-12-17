@@ -18,6 +18,15 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ContentViewController.hideKeyboard))
+        tapGesture.cancelsTouchesInView = true
+        tableView.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    func hideKeyboard() {
+        tableView.endEditing(true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,16 +73,25 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
         return view
     }
     
+    
+
+
 }
 
-class ContentTableViewCell: UITableViewCell {
+class ContentTableViewCell: UITableViewCell, UITextFieldDelegate  {
     
+    @IBOutlet weak var txtJuice: UITextField!
+    @IBOutlet weak var txtAmount: UITextField!
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var versusLabel: UILabel!
     @IBOutlet weak var gameDateLabel: UILabel!
     @IBOutlet weak var dataPieceLabel: UILabel!
+    
     override func awakeFromNib() {
         self.selectionStyle = .none
     }
+
+
     
+
 }
