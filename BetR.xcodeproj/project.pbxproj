@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		134B11EB1DF96DFF00CF17A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 134B11EA1DF96DFF00CF17A6 /* Podfile */; };
-		135BBDC11DFA4D9D0079C39A /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */; };
+		135BBDC11DFA4D9D0079C39A /* BetTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDBF1DFA4D9D0079C39A /* BetTicketViewController.swift */; };
 		135BBDC21DFA4D9D0079C39A /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDC01DFA4D9D0079C39A /* MockData.swift */; };
 		135BBDC41DFC147C0079C39A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BBDC31DFC147C0079C39A /* Theme.swift */; };
 		13A2C8AC1DF9700D00F022DC /* ACTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */; };
@@ -50,7 +50,7 @@
 /* Begin PBXFileReference section */
 		134B11EA1DF96DFF00CF17A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		13555B971DB6E704003A379B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		135BBDBF1DFA4D9D0079C39A /* BetTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetTicketViewController.swift; sourceTree = "<group>"; };
 		135BBDC01DFA4D9D0079C39A /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		135BBDC31DFC147C0079C39A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTabScrollView.swift; sourceTree = "<group>"; };
@@ -181,14 +181,14 @@
 				13A2C8AA1DF9700D00F022DC /* ACTabScrollView.swift */,
 				13A2C8AB1DF9700D00F022DC /* ACTabScrollView+Protocol.swift */,
 				13F7E4911D9F43A900FEDB93 /* AppDelegate.swift */,
+				135BBDBF1DFA4D9D0079C39A /* BetTicketViewController.swift */,
 				13B9A3151DFE1EB500A22636 /* BlankController.swift */,
 				13AE51EB1DAB06A9006F40BD /* Checkbox.swift */,
-				135BBDBF1DFA4D9D0079C39A /* ContentViewController.swift */,
 				13555B971DB6E704003A379B /* Extensions.swift */,
 				13B2B92C1DA9DB5C004AA2AD /* GameSelectViewController.swift */,
 				13F7E5111DA2115600FEDB93 /* GameTrak.swift */,
-				13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */,
 				13F7E50F1DA20ABE00FEDB93 /* GameTrakTableViewCell.swift */,
+				13F7E4FD1DA06F1100FEDB93 /* HomeController.swift */,
 				135BBDC01DFA4D9D0079C39A /* MockData.swift */,
 				135BBDC31DFC147C0079C39A /* Theme.swift */,
 				13F7E4931D9F43A900FEDB93 /* ViewController.swift */,
@@ -411,7 +411,7 @@
 				13A2C8AD1DF9700D00F022DC /* ACTabScrollView+Protocol.swift in Sources */,
 				13AD812B1DC4E3D80068286E /* HomeController.swift in Sources */,
 				13AD812C1DC4E3D80068286E /* Checkbox.swift in Sources */,
-				135BBDC11DFA4D9D0079C39A /* ContentViewController.swift in Sources */,
+				135BBDC11DFA4D9D0079C39A /* BetTicketViewController.swift in Sources */,
 				13AD812D1DC4E3D80068286E /* Extensions.swift in Sources */,
 				13A2C8AC1DF9700D00F022DC /* ACTabScrollView.swift in Sources */,
 			);

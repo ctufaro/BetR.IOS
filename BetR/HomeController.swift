@@ -32,6 +32,7 @@ class HomeController: UIViewController, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         actIndicator.startAnimating()
+        tblView.allowsSelection = false
         GetGameData()
     }
     

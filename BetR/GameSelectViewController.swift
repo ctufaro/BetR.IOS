@@ -31,7 +31,7 @@ class GameSelectViewController: UIViewController, ACTabScrollViewDelegate, ACTab
         for category in BetCategory.allValues() {
             
             if(category == BetCategory.straight){
-                let vc = storyboard.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
+                let vc = storyboard.instantiateViewController(withIdentifier: "BetTicketViewController") as! BetTicketViewController
                 vc.category = category
                 addChildViewController(vc) // don't forget, it's very important
                 contentViews.append(vc.view)

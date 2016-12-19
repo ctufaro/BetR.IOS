@@ -513,10 +513,10 @@
             </objects>
             <point key="canvasLocation" x="2690" y="-1082"/>
         </scene>
-        <!--Content View Controller-->
+        <!--Bet Ticket View Controller-->
         <scene sceneID="1R4-XS-MNQ">
             <objects>
-                <viewController storyboardIdentifier="ContentViewController" id="sDm-6T-nI4" customClass="ContentViewController" customModule="BetR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BetTicketViewController" id="sDm-6T-nI4" customClass="BetTicketViewController" customModule="BetR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eie-Kh-Gvl"/>
                         <viewControllerLayoutGuide type="bottom" id="JUl-64-5zj"/>
@@ -544,7 +544,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="155" id="OMQ-TY-zLm" customClass="ContentTableViewCell" customModule="BetR" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="155" id="OMQ-TY-zLm" customClass="BetTicketTableViewCell" customModule="BetR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="600" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="OMQ-TY-zLm" id="cI7-qC-QjF">
