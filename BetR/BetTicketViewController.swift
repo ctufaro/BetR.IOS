@@ -18,8 +18,10 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
         
@@ -41,6 +43,7 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let game = gamesArray[(indexPath as NSIndexPath).row]
         
         // set the cell
@@ -49,6 +52,11 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.versusLabel.text = game.Versus
         cell.gameDateLabel.text = game.GameDate
         cell.dataPieceLabel.text = game.Data
+        cell.txtAmount.text = game.Amount == nil ? "" : String(describing: game.Amount!)
+        cell.txtJuice.text = game.Juice == nil ? "" : String(describing: game.Juice!)
+        cell.lblToWin.text = game.ToWin == nil ? "" : String(describing: game.ToWin!)
+        cell.lblToWin.tag = indexPath.row
+        cell.gamesArray = gamesArray
         return cell
     }
     
@@ -126,19 +134,57 @@ class BetTicketTableViewCell: UITableViewCell, UITextFieldDelegate  {
     @IBOutlet weak var versusLabel: UILabel!
     @IBOutlet weak var gameDateLabel: UILabel!
     @IBOutlet weak var dataPieceLabel: UILabel!
+    @IBOutlet weak var lblToWin: UILabel!
+    var gamesArray: [GameTrakSelections] = []
     
     override func awakeFromNib() {
         self.selectionStyle = .none
         txtAmount.delegate = self
         txtJuice.delegate = self
+        lblToWin.text = ""
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         BetTicketViewController.activeText = textField
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        //update gamesarray
+        
         BetTicketViewController.activeText = nil
+        
+        var juiceValue : Float? = 0
+        var amountValue : Float? = 0
+        var result : Float? = 0
+        var index : Int? = Int(lblToWin.tag)
+        
+        if let juice = txtJuice.text  {
+            juiceValue = Float(juice) ?? 0
+        }
+        
+        if let amount = txtAmount.text  {
+            amountValue = Float(amount) ?? 0
+        }
+        
+        if juiceValue! < 0 {
+            result = Float(amountValue!) / (Float((abs(juiceValue!)/100)))
+        }
+        
+        else if juiceValue! > 0 {
+            result = Float(amountValue!) * (Float((abs(juiceValue!)/100)))
+        }
+            
+        else{
+            result = 0
+        }
+        
+        self.gamesArray[index!].Amount = amountValue
+        self.gamesArray[index!].Juice = juiceValue
+        self.gamesArray[index!].ToWin = result
+
+        lblToWin.text = String(describing: result!)
     }
     
 

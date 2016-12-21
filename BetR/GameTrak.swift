@@ -71,12 +71,18 @@ class GameTrakSelections{
     var Versus : String
     var GameDate : String
     var Data : String
+    var Amount : Float?
+    var Juice : Float?
+    var ToWin : Float?
     
-    init(Team: String, Versus: String, GameDate:String, Data:String){
+    init(Team: String, Versus: String, GameDate:String, Data:String, Amount:Float?, Juice:Float?, ToWin:Float?){
         self.Team = Team
         self.Versus = Versus
         self.GameDate = GameDate
         self.Data = Data
+        self.Amount = Amount
+        self.Juice = Juice
+        self.ToWin = ToWin
     }
     
     func Equalz(Team: String, Versus: String, GameDate: String, Data: String) -> Bool {

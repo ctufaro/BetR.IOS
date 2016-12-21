@@ -108,7 +108,7 @@ class GameTrakTableViewCell: UITableViewCell {
     }
     
     func AddRemoveGames(toggle: Bool, team: String, versus:String, gameDate:String, data:String){
-        let selItem : GameTrakSelections = GameTrakSelections(Team:team,Versus:versus,GameDate:gameDate,Data:data)
+        let selItem : GameTrakSelections = GameTrakSelections(Team:team,Versus:versus,GameDate:gameDate,Data:data, Amount:nil, Juice:nil, ToWin:nil)
         let selInd = GameTrakTableViewCell.sharedGames.index(where: {$0.Equalz(Team: team, Versus: versus, GameDate: gameDate, Data: data)})
 
         if toggle{
