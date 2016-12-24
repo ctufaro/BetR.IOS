@@ -1,6 +1,6 @@
 import UIKit
 
-class BetTicketViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BetTicketViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellUpdaterDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     static weak var activeText: UITextField!
@@ -18,7 +18,6 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -48,6 +47,7 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
         
         // set the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! BetTicketTableViewCell
+        cell.myDelegate = self
         cell.teamLabel.text = game.Team
         cell.versusLabel.text = game.Versus
         cell.gameDateLabel.text = game.GameDate
@@ -122,12 +122,62 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
             UIView.commitAnimations()
         }
     }
+    
+    func deleteGame(pcell: UITableViewCell) {
+        
+        //row index of current table view
+        let gIndex = tableView.indexPath(for: pcell)?.row
+        
+        //the actual game that will be removed
+        let gRemove = gamesArray[gIndex!];
+        
+        //toggle the button color on the game lines screen while scrolling
+        HomeController.buttonStates[gRemove.ORow!]!.buttonHomeMoney = false
+        
+        //toggle the button color on the game lines screen
+        gRemove.Button.backgroundColor = UIColor(red: 224, green: 224, blue: 224)
+        
+        //removing game from current table view source
+        gamesArray.remove(at: gIndex!)
+        
+        //array index of game from game lines screen, this is kinda wonky
+        let selInd = GameTrakTableViewCell.sharedGames.index(where: {$0.Equalz(Team: gRemove.Team, Versus: gRemove.Versus, GameDate: gRemove.GameDate, Data: gRemove.Data)})
+        
+        //removing game from game lines array, same as tapping the button on the previous screen
+        GameTrakTableViewCell.sharedGames.remove(at: selInd!)
+        
+        //visuals for tableview
+        tableView.deleteRows(at: [tableView.indexPath(for: pcell)!], with: .left)
+    }
+    
+    
+    @IBAction func btnSaveBet(_ sender: Any) {
+        for games in gamesArray{
+            print("-----------------")
+            print(games.Data)
+            print(games.Team)
+            print(games.Versus)
+            print(games.GameDate)
+            print(games.Amount)
+            print(games.Juice)
+            print(games.ToWin)
+            print("-----------------")
+        }
+    }
+
 
 
 }
 
+protocol CustomCellUpdaterDelegate {
+    func deleteGame(pcell: UITableViewCell)
+}
+
+
+
 class BetTicketTableViewCell: UITableViewCell, UITextFieldDelegate  {
     
+
     @IBOutlet weak var txtJuice: UITextField!
     @IBOutlet weak var txtAmount: UITextField!
     @IBOutlet weak var teamLabel: UILabel!
@@ -136,6 +186,11 @@ class BetTicketTableViewCell: UITableViewCell, UITextFieldDelegate  {
     @IBOutlet weak var dataPieceLabel: UILabel!
     @IBOutlet weak var lblToWin: UILabel!
     var gamesArray: [GameTrakSelections] = []
+    var myDelegate: CustomCellUpdaterDelegate?
+    
+    @IBAction func btnDelete(_ sender: Any) {
+        myDelegate?.deleteGame(pcell: self)
+    }
     
     override func awakeFromNib() {
         self.selectionStyle = .none
@@ -158,7 +213,7 @@ class BetTicketTableViewCell: UITableViewCell, UITextFieldDelegate  {
         var juiceValue : Float? = 0
         var amountValue : Float? = 0
         var result : Float? = 0
-        var index : Int? = Int(lblToWin.tag)
+        let index : Int? = Int(lblToWin.tag)
         
         if let juice = txtJuice.text  {
             juiceValue = Float(juice) ?? 0

@@ -84,22 +84,22 @@ class GameTrakTableViewCell: UITableViewCell {
         
         switch field {
         case "HomeMoney":
-            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.MoneyLineHome)
+            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.MoneyLineHome, nRow:row, Button:button)
             HomeController.buttonStates[row]!.buttonHomeMoney = toggle
         case "HomeSpread":
-            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.SpreadHome)
+            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.SpreadHome, nRow:row, Button:button)
             HomeController.buttonStates[row]!.buttonHomeSpread = toggle
         case "HomeTotal":
-            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.OverAdjust)
+            AddRemoveGames(toggle: toggle, team: HomeTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.OverAdjust, nRow:row, Button:button)
             HomeController.buttonStates[row]!.buttonHomeOU = toggle
         case "VisitMoney":
-            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.MoneyLineVisiting)
+            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.MoneyLineVisiting, nRow:row, Button:button)
             HomeController.buttonStates[row]!.buttonVisitMoney = toggle
         case "VisitSpread":
-            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.SpreadVisiting)
+            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.SpreadVisiting, nRow:row, Button:button)
             HomeController.buttonStates[row]!.buttonVisitSpread = toggle
         case "VisitTotal":
-            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.OverAdjust)
+            AddRemoveGames(toggle: toggle, team: AwayTeam, versus: Versus, gameDate: GameDate, data: selectedGameLine.OverAdjust, nRow:row, Button:button)
             HomeController.buttonStates[row]!.buttonVisitOU = toggle
         default:
             toggle = true
@@ -107,8 +107,8 @@ class GameTrakTableViewCell: UITableViewCell {
         
     }
     
-    func AddRemoveGames(toggle: Bool, team: String, versus:String, gameDate:String, data:String){
-        let selItem : GameTrakSelections = GameTrakSelections(Team:team,Versus:versus,GameDate:gameDate,Data:data, Amount:nil, Juice:nil, ToWin:nil)
+    func AddRemoveGames(toggle: Bool, team: String, versus:String, gameDate:String, data:String, nRow:Int, Button:UIButton){
+        let selItem : GameTrakSelections = GameTrakSelections(Team:team,Versus:versus,GameDate:gameDate,Data:data, Amount:nil, Juice:nil, ToWin:nil, ORow:nRow, Button:Button)
         let selInd = GameTrakTableViewCell.sharedGames.index(where: {$0.Equalz(Team: team, Versus: versus, GameDate: gameDate, Data: data)})
 
         if toggle{

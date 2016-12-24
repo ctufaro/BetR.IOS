@@ -533,8 +533,12 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-bi-eOu">
-                                            <rect key="frame" x="270" y="-8" width="61" height="30"/>
+                                            <rect key="frame" x="250" y="-8" width="81" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="Save Bet"/>
+                                            <connections>
+                                                <action selector="btnSaveBet:" destination="sDm-6T-nI4" eventType="touchUpInside" id="Gpd-IP-2uZ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -621,6 +625,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8H-TE-zDt">
+                                                    <rect key="frame" x="263" y="4" width="33" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="X" image="cancel-button">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnDelete:" destination="OMQ-TY-zLm" eventType="touchUpInside" id="lo3-lR-D8x"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -713,6 +727,7 @@
     </scenes>
     <resources>
         <image name="background" width="375" height="667"/>
+        <image name="cancel-button" width="512" height="512"/>
         <image name="dont-have-acct-btn" width="214" height="14"/>
         <image name="gamelines" width="22" height="22"/>
         <image name="icon-locked" width="128" height="128"/>
