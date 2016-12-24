@@ -152,7 +152,7 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     @IBAction func btnSaveBet(_ sender: Any) {
-        for games in gamesArray{
+        /*for games in gamesArray{
             print("-----------------")
             print(games.Data)
             print(games.Team)
@@ -162,7 +162,7 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
             print(games.Juice)
             print(games.ToWin)
             print("-----------------")
-        }
+        }*/
     }
 
 
@@ -238,8 +238,8 @@ class BetTicketTableViewCell: UITableViewCell, UITextFieldDelegate  {
         self.gamesArray[index!].Amount = amountValue
         self.gamesArray[index!].Juice = juiceValue
         self.gamesArray[index!].ToWin = result
-
-        lblToWin.text = String(describing: result!)
+        
+        lblToWin.text = String(format: "%.2f", result!)
     }
     
 
