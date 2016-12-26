@@ -372,11 +372,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504271826.665419"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -388,11 +388,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504271826.665419"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -420,11 +420,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504271826.665419"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -436,11 +436,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504271826.665419"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "btnDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -452,11 +452,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504271826.665419"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "btnDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -532,11 +532,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504270970.297824"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "BetTicketViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -548,12 +548,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetR/BetTicketViewController.swift"
-            timestampString = "504271826.665419"
+            timestampString = "504455439.547255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "btnSaveBet(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetR/BetTicketViewController.swift"
+            timestampString = "504454648.76087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "RemoveFromButtonState(gRemove:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetR/GameTrakTableViewCell.swift"
+            timestampString = "504454987.116603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "AddRemoveGames(toggle:team:versus:gameDate:data:nRow:Button:bType:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

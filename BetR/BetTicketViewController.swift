@@ -132,7 +132,7 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
         let gRemove = gamesArray[gIndex!];
         
         //toggle the button color on the game lines screen while scrolling
-        HomeController.buttonStates[gRemove.ORow!]!.buttonHomeMoney = false
+        RemoveFromButtonState(gRemove: gRemove)
         
         //toggle the button color on the game lines screen
         gRemove.Button.backgroundColor = UIColor(red: 224, green: 224, blue: 224)
@@ -148,6 +148,25 @@ class BetTicketViewController: UIViewController, UITableViewDelegate, UITableVie
         
         //visuals for tableview
         tableView.deleteRows(at: [tableView.indexPath(for: pcell)!], with: .left)
+    }
+    
+    func RemoveFromButtonState(gRemove: GameTrakSelections){
+        switch gRemove.BType {
+        case "HomeMoney":
+            HomeController.buttonStates[gRemove.ORow!]!.buttonHomeMoney = false
+        case "HomeSpread":
+            HomeController.buttonStates[gRemove.ORow!]!.buttonHomeSpread = false
+        case "HomeTotal":
+            HomeController.buttonStates[gRemove.ORow!]!.buttonHomeOU = false
+        case "VisitMoney":
+            HomeController.buttonStates[gRemove.ORow!]!.buttonVisitMoney = false
+        case "VisitSpread":
+            HomeController.buttonStates[gRemove.ORow!]!.buttonVisitSpread = false
+        case "VisitTotal":
+            HomeController.buttonStates[gRemove.ORow!]!.buttonVisitOU = false
+        default:
+            HomeController.buttonStates[gRemove.ORow!]!.buttonHomeMoney = false
+        }
     }
     
     
